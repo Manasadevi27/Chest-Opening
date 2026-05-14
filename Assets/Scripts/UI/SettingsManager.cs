@@ -1,13 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SettingsManager : MonoBehaviour
 {
-    [SerializeField]AudioSource audioSource;
-    public void setVolume (float  value)
+    public void SetSFXVolume(float value)
     {
-        Debug.Log("Volume changed to: " + value);
-        audioSource.volume=value;
+        Debug.Log($"SFX Volume changed to: {value}");
+        AudioManager.Instance?.SetSFXVolume(value);
+    }
+
+    public void SetMusicVolume(float value)
+    {
+        Debug.Log($"Music Volume changed to: {value}");
+        AudioManager.Instance?.SetMusicVolume(value);
     }
 }
