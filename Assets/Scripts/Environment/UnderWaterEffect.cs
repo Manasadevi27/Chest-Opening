@@ -2,14 +2,13 @@ using UnityEngine;
 
 public class UnderWaterEffect : MonoBehaviour
 {
-    public Camera mainCamera;
-    public GameObject BubbleParticles;
+    // public GameObject BubbleParticles;
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {
             RenderSettings.fog=true;
-            BubbleParticles.SetActive(true);
+            // BubbleParticles.SetActive(true);
             Camera.main.clearFlags = CameraClearFlags.SolidColor;
         }
     }
@@ -18,7 +17,7 @@ public class UnderWaterEffect : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             RenderSettings.fog=false;
-            BubbleParticles.SetActive(false);
+            // BubbleParticles.SetActive(false);
             Camera.main.clearFlags = CameraClearFlags.Skybox;
         }
     }

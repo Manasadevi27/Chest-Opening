@@ -74,11 +74,11 @@ public class ChestMovement : MonoBehaviour
     private IEnumerator StartDiveAndRiseUp()
     {
         yield return StartCoroutine(RotateTo(Quaternion.Euler(45f, 0f, 0f), 1f));
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(2f);
         yield return StartCoroutine(RotateTo(Quaternion.identity, 1f));
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(3f);
         yield return StartCoroutine(RotateTo(Quaternion.Euler(-45f, 0f, 0f), 1f));
-        yield return new WaitForSeconds(0.05f);
+        yield return new WaitForSeconds(2f);
         yield return StartCoroutine(RotateTo(Quaternion.identity, 1f));
     }
 
